@@ -1,0 +1,59 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    color: white;
+    background: #202731;
+}
+
+section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 400px;
+    padding-top: 100px;
+    background: #3c31dd;
+}
+
+
+.below-shadow {
+    text-align: center;
+        
+    }
+
+
+summary {
+    font-size: 1.25rem;
+    font-weight: 600;
+    background-color: rgb(83, 83, 90);
+    color: rgb(208, 209, 212);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    outline: none;
+    border-radius: 0.25rem;
+    text-align: left;
+    cursor: pointer;
+    position: relative;
+  }
+  details > summary::after {
+    position: absolute;
+    content: "✻";
+    right: 20px;
+  }
+  details[open] > summary::after {
+    position: absolute;
+    content: "-";
+    right: 20px;
+  }
+  details > summary::-webkit-details-marker {
+    display: none;
+  }
+
+  details[open] summary ~ * {
+    animation: sweep .5s ease-in-out;
+  }
+  @keyframes sweep {
+    0%    {opacity: 0; margin-top: -10px}
+    100%  {opacity: 1; margin-top: 0px}
+  }
+  
